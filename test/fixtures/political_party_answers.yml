@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vote: No
+  question: prohibit_cats_run
+  political_party: cat
+
+two:
+  vote: Yes
+  question: prohibit_mice_holes
+  political_party: cat
+
+three:
+  vote: Yes
+  question: prohibit_cats_run
+  political_party: mice
+
+four:
+  vote: No
+  question: prohibit_mice_holes
+  political_party: mice

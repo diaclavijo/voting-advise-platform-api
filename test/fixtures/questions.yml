@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+prohibit_cats_run:
+  title: Prohibit cats to run?
+  body: ''
+
+prohibit_mice_holes:
+  title: Prohibit mice to make holes?
+  body: ''
