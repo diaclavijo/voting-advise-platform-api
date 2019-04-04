@@ -6,16 +6,14 @@
 200
 #### Body
 ```json
-{
-  "data": [
-    {
-      "id":  3,
-      "title": "Question Title", 
-      "body": ""
-    },
-    ...
-  ]
-}
+[
+  {
+    "id":  3,
+    "title": "Question Title", 
+    "body": ""
+  },
+  ...
+]
 ```
 
 ## POST /answer
@@ -37,18 +35,16 @@ HTTP Code: 404
 ### Response
 HTTP Code: 200
 ```json
-{
-  "data": [
-    {
-      "question_id":  3,
-      "user_vote": "Yes/No/Neutral", 
-      "political_party": "Name",
-      "political_vote": "Yes/No/Neutral",
-      "score": 2
-    },
-    ... 
-  ]
-}
+[ 
+  {
+    "question_id":  3,
+    "user_vote": "Yes/No/Neutral", 
+    "political_party": "Name",
+    "political_vote": "Yes/No/Neutral",
+    "score": 2
+  },
+  ... 
+]
 ```
 
 
