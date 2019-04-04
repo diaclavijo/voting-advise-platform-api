@@ -5,11 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Question.create!(
+prohibit_cats_run = Question.create!(
   title: 'Prohibit cats to run?',
   body: '',
 )
-Question.create!(
+prohibit_mice_holes = Question.create!(
   title: 'Prohibit mice to make holes?',
   body: '',
+)
+
+cat_party = PoliticalParty.create!(
+  name: 'cat',
+)
+mice_party = PoliticalParty.create!(
+  name: 'mice',
+)
+
+PoliticalPartyAnswer.create!(
+  political_party: cat_party,
+  question: prohibit_cats_run,
+  vote: 'no',
+)
+PoliticalPartyAnswer.create!(
+  political_party: cat_party,
+  question: prohibit_mice_holes,
+  vote: 'yes',
+)
+PoliticalPartyAnswer.create!(
+  political_party: mice_party,
+  question: prohibit_cats_run,
+  vote: 'yes',
+)
+PoliticalPartyAnswer.create!(
+  political_party: mice_party,
+  question: prohibit_mice_holes,
+  vote: 'no',
 )
