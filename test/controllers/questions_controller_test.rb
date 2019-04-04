@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class QuestionsControllerTest < ActionDispatch::IntegrationTest
-  test "returns questions" do
+  test "GET /questions" do
     get questions_path
     assert_response :success
     assert_equal(
