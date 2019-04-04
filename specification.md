@@ -46,6 +46,15 @@ dont ca |  dont             | 0   | 2
 dont ca |  no               | 1   | 1
 
 
+### Cat party results
+Result = 4 
+
+#### Prohibit cats to run? 
+You said no and cats said no. => +2  
+
+
+
+
 
 user_reply |  Politcal Party | Reply | Score
 ----------------------------------------------

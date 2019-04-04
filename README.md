@@ -31,22 +31,10 @@ HTTP Code: 200
 HTTP Code: 404
 
 
-## GET /results
+## GET /result
 ### Response
 HTTP Code: 200
-```json
-[ 
-  {
-    "question_id":  3,
-    "user_vote": "Yes/No/Neutral", 
-    "political_party": "Name",
-    "political_vote": "Yes/No/Neutral",
-    "score": 2
-  },
-  ... 
-]
-```
-
+... Massi knows
 
 
 
