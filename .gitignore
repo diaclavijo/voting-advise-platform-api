@@ -54,3 +54,4 @@ build-iPhoneSimulator/
 *.key
 tmp/*
 log/*
+public/assets/*
