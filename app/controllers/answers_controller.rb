@@ -3,9 +3,9 @@ class AnswersController < ApplicationController
     Question.find(answer_params[:question_id])
     user = User.find_or_create_by!(uuid: user_uuid)
     Answer.create!(answer_params.merge(user: user))
-    head :created
+    render status: :created, json: {success: true}
   rescue ActiveRecord::RecordNotFound
-    head :not_found
+    render status: :not_found, json: {error: 'not_found'}
   end
 
   private

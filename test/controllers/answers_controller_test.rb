@@ -14,6 +14,7 @@ class AnswersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_response :success
+    assert_equal response.parsed_body, {'success' => true}
     answer = Answer.last
     user = User.last
     assert_equal(
