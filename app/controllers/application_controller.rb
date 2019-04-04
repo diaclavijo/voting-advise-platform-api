@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def user_uuid
-    cookies.permanent.encrypted[:uuid] = SecureRandom.base58 if cookies.encrypted[:uuid].nil?
-    cookies.encrypted[:uuid]
+    params[:user_uuid]
   end
 end
