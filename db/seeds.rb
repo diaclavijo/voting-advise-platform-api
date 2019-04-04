@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Question.create!(
+  title: 'Prohibit cats to run?',
+  body: '',
+)
+Question.create!(
+  title: 'Prohibit mice to make holes?',
+  body: '',
+)
