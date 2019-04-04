@@ -2,14 +2,22 @@ require 'test_helper'
 
 class ResultsControllerTest < ActionDispatch::IntegrationTest
   test "GET /result" do
-    get result_path
+    uuid = 'fake-uuid'
+
+    get result_path, params: {uuid: uuid}
     assert_response :success
     assert_equal response.parsed_body, []
 
-    post answers_path, params: {question_id: questions(:prohibit_cats_run).id, vote: 'no'}
-    post answers_path, params: {question_id: questions(:prohibit_mice_holes).id, vote: 'yes'}
 
-    get result_path
+
+    post answers_path, params: {
+      question_id: questions(:prohibit_cats_run).id, vote: 'no', uuid: uuid
+    }
+    post answers_path, params: {
+      question_id: questions(:prohibit_mice_holes).id, vote: 'yes', uuid: uuid
+    }
+
+    get result_path, params: {uuid: uuid}
     assert_response :success
     assert_equal response.parsed_body, {
       'parties' => [

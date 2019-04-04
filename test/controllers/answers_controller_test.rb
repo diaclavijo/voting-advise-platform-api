@@ -9,8 +9,11 @@ class AnswersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "POST /answers when question exists" do
+    uuid = 'fake-uuid'
     assert_difference ['Answer.count', 'User.count'], +1 do
-      post answers_path, params: {question_id: questions(:prohibit_cats_run).id, vote: 'yes'}
+      post answers_path, params: {
+        question_id: questions(:prohibit_cats_run).id, vote: 'yes', uuid: uuid
+      }
     end
 
     assert_response :success
@@ -27,7 +30,9 @@ class AnswersControllerTest < ActionDispatch::IntegrationTest
 
     assert_difference 'Answer.count', +1 do
       assert_no_difference 'User.count' do
-        post answers_path, params: {question_id: questions(:prohibit_mice_holes).id, vote: 'yes'}
+        post answers_path, params: {
+          question_id: questions(:prohibit_mice_holes).id, vote: 'yes', uuid: uuid
+        }
       end
     end
     answer = Answer.last
