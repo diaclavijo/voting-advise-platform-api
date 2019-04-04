@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  uuid: MyString
+cat:
+  uuid: asdf
   age: 1
   email: MyString
   genre: MyString
 
-two:
-  uuid: MyString
+mouse:
+  uuid: jkln
   age: 1
   email: MyString
   genre: MyString

@@ -1,11 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  vote: MyString
-  question: one
-  user: one
+  vote: yes
+  question: prohibit_cats_run
+  user: mouse
 
 two:
-  vote: MyString
-  question: two
-  user: two
+  vote: no
+  question: prohibit_mice_holes
+  user: mouse
+
+third:
+  vote: yes
+  question: prohibit_cats_run
+  user: cat
+
+fourth:
+  vote: yes
+  question: prohibit_mice_holes
+  user: cat
