@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   end
 
   def user_uuid
-    params[:user_uuid]
+    params[:uuid]
   end
 end
