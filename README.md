@@ -16,12 +16,12 @@
 ]
 ```
 
-## POST /answer
+## POST /answers
 ### Params
 ```json
 {
   "question_id": 2, 
-  "answer": "Yes/No/Neutral"
+  "vote": "yes/no/neutral"
 }
 ```
 ### Response
