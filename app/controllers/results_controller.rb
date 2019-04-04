@@ -22,7 +22,7 @@ class ResultsController < ApplicationController
       end
     end
     max_possible_score = user_answers.size * 2
-    score.transform_values! { |v| (v/max_possible_score.to_f)*100 }
+    score.transform_values! {|v| (v / max_possible_score.to_f) * 100}
 
     render status: :ok, json: {
       'parties' => PoliticalParty.all.map do |party|
