@@ -42,7 +42,7 @@ class ResultsController < ApplicationController
             }
           end
         }
-      end
+      end.sort_by { |hsh| -1 * hsh['score'] }
     }
   end
 end
