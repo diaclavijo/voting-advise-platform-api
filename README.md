@@ -1,10 +1,10 @@
-# Description
-**The Rails Backend** of Voting Advise Platform: Create your own polls and political parties answers
-for helping people to choose the right party.
+# Voting Advise Platform Backend
+Create your own polls and political parties answers for helping people to choose the right party.
 
 The client is located at: 
 
-This Rails API was sponsored by Helpling and developed insidea Tamedia Hackathon. 
+This Rails API was sponsored by [Helpling](https://www.helpling.de/careers#positions) and 
+developed inside [Tamedia Hackathon 19](https://harryf.github.io/tamedia-hackdays/). 
 
 The project is still missing functionality, below the road map.
 
