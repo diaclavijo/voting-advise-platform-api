@@ -43,5 +43,13 @@ class AnswersControllerTest < ActionDispatch::IntegrationTest
         'user_id' => user.id,
       },
     )
+
+    assert_no_difference 'Answer.count' do
+      assert_changes 'answer.reload.vote', from: 'yes', to: 'no' do
+        post answers_path, params: {
+          question_id: questions(:prohibit_mice_holes).id, vote: 'no', uuid: uuid
+        }
+      end
+    end
   end
 end
