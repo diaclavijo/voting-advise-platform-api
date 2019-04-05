@@ -1,6 +1,9 @@
 class PollsController < ApplicationController
   def create
-    render status: :not_found, json: {} and return if current_user.nil?
+    if current_user.nil? && user_uuid.nil?
+      render status: :not_found, json: {} and return
+    end
+    current_user || User.create!(uuid: user_uuid)
     Poll.transaction do
       poll = Poll.new(name: params[:name], user: current_user)
       political_parties = []
