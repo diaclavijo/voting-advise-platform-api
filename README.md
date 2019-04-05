@@ -1,7 +1,7 @@
 # Voting Advise Platform Backend
 Create your own polls and political parties answers for helping people to choose the right party.
 
-The client is located at: 
+It has [its react client app](https://github.com/massick/voting-advise-platform-client)
 
 This Rails API was sponsored by [Helpling](https://www.helpling.de/careers#positions) and 
 developed inside [Tamedia Hackathon 19](https://harryf.github.io/tamedia-hackdays/). 
