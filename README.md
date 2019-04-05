@@ -38,3 +38,33 @@ HTTP Code: 200
 
 
 
+## POST /polls
+### Params
+```json
+{ 
+  "questions": [
+    { 
+      "title":  "Brexit?",
+      "body": "",
+      "political_party_answers": [
+        {
+          "political_party_name": "laboral",
+          "vote": "yes"
+        },
+        ...
+      ]
+    },
+    { 
+      "title":  "Brexit?",
+      "body": "",
+      "political_party_answers": [
+        {
+          "political_party_name": "laboral",
+          "vote": "yes"
+        },
+        ...
+      ]
+    },
+  ],
+}
+```

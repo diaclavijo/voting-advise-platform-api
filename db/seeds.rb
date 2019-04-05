@@ -5,13 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+
+user = User.create(
+  uuid: 'asdf'
+)
+
+first_poll = Poll.create!(
+  name: 'FirstPoll',
+  user: user,
+)
+
 prohibit_cats_run = Question.create!(
   title: 'Prohibit cats to run?',
   body: '',
+  poll: first_poll,
 )
 prohibit_mice_holes = Question.create!(
   title: 'Prohibit mice to make holes?',
   body: '',
+  poll: first_poll,
 )
 
 cat_party = PoliticalParty.create!(

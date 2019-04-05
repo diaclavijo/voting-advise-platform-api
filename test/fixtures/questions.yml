@@ -3,7 +3,9 @@
 prohibit_cats_run:
   title: Prohibit cats to run?
   body: ''
+  poll: one
 
 prohibit_mice_holes:
   title: Prohibit mice to make holes?
   body: ''
+  poll: one
