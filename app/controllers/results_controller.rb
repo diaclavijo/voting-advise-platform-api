@@ -5,7 +5,8 @@ class ResultsController < ApplicationController
     user_answers = poll.answers.where(user_id: current_user.id).includes(:question)
 
     score = Hash.new(0)
-    PoliticalParty.all.each do |party|
+    poll_political_parties = poll.political_party_answers.map(&:political_party).uniq
+    poll_political_parties.each do |party|
       user_answers.each do |user_answer|
         party_answer = PoliticalPartyAnswer.find_by(
           political_party_id: party.id,
@@ -26,7 +27,7 @@ class ResultsController < ApplicationController
     score.transform_values! {|v| (v / max_possible_score.to_f) * 100}
 
     render status: :ok, json: {
-      'parties' => PoliticalParty.all.map do |party|
+      'parties' => poll_political_parties.map do |party|
         {
           'name' => party.name,
           'score' => score[party.name],
