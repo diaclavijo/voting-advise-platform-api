@@ -1,14 +1,15 @@
 require 'test_helper'
 
 class ResultsControllerTest < ActionDispatch::IntegrationTest
-  test "GET /result" do
+  test "GET /result when user has not replied anything" do
     uuid = 'fake-uuid'
-
-    get result_path, params: {uuid: uuid}
+    get poll_result_path(polls(:one).id), params: {uuid: uuid}
     assert_response :success
     assert_equal response.parsed_body, []
+  end
 
-
+  test "GET /result" do
+    uuid = users(:cat).uuid
 
     post answers_path, params: {
       question_id: questions(:prohibit_cats_run).id, vote: 'yes', uuid: uuid
@@ -17,7 +18,7 @@ class ResultsControllerTest < ActionDispatch::IntegrationTest
       question_id: questions(:prohibit_mice_holes).id, vote: 'no', uuid: uuid
     }
 
-    get result_path, params: {uuid: uuid}
+    get poll_result_path(polls(:one).id), params: {uuid: uuid}
     assert_response :success
     assert_equal response.parsed_body, {
       'parties' => [

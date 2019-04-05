@@ -19,3 +19,13 @@ four:
   vote: 'no'
   question: prohibit_mice_holes
   political_party: mice
+
+fifth:
+  vote: 'neutral'
+  question: prohibit_oranges
+  political_party: mice
+
+sixth:
+  vote: 'neutral'
+  question: prohibit_oranges
+  political_party: cat

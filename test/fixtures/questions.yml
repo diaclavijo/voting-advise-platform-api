@@ -9,3 +9,8 @@ prohibit_mice_holes:
   title: Prohibit mice to make holes?
   body: ''
   poll: one
+
+prohibit_oranges:
+  title: Oranges
+  body: ''
+  poll: two

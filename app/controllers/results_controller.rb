@@ -1,7 +1,8 @@
 class ResultsController < ApplicationController
   def show
     render status: :ok, json: [] and return if current_user.nil?
-    user_answers = current_user.answers.includes(:question)
+    poll = Poll.find(params[:poll_id])
+    user_answers = poll.answers.where(user_id: current_user.id).includes(:question)
 
     score = Hash.new(0)
     PoliticalParty.all.each do |party|

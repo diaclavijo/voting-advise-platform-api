@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    render json: Question.all
+    poll = Poll.find(params[:poll_id])
+    render json: poll.questions
   end
 end

@@ -4,3 +4,7 @@ one:
   name: FirstPoll
   user: cat
 
+two:
+  name: SecondPoll
+  user: mouse
+

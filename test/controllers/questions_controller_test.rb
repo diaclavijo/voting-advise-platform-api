@@ -2,7 +2,7 @@ require 'test_helper'
 
 class QuestionsControllerTest < ActionDispatch::IntegrationTest
   test "GET /questions" do
-    get questions_path
+    get poll_questions_path(polls(:one).id)
     assert_response :success
     assert_equal(
       response.parsed_body,
